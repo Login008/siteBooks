@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin: 10px 0 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 2px;
+            margin-bottom: 15px;
+            margin-left: -9px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #87cefa;
+            border: none;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            color: white;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #4682b4;
+        }
+
+        a {
+            color: #4682b4;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Введите параметр поиска:</h2>
+        <form action="search.php" method="POST">
+            <label for="search">Введите параметр поиска:</label>
+            <input type="text" id="search" name="search" required><br>
+            <input type="submit" value="Поиск">
+        </form>
+    </div>
+</body>
+</html>
