@@ -1,86 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru">
+<link rel="stylesheet" href="styles.css"/>
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Авторизация</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .container {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: center;
-        }
-
-        h2 {
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            text-align: left;
-            margin: 10px 0 5px;
-        }
-
-        input {
-            width: 100%;
-            padding: 2px;
-            margin-bottom: 15px;
-            margin-left: -9px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #87cefa;
-            border: none;
-            margin-bottom: 15px;
-            border-radius: 4px;
-            cursor: pointer;
-            color: white;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background-color: #4682b4;
-        }
-
-        a {
-            color: #4682b4;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="container">
+		<title>Вход</title> 
+	</head>
+	<body>
+	<div id="popup" class="popup" style="display:none;">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <p id="popup-message"></p>
+</div>
+	<div class="form-container">
         <h2>Авторизация</h2>
-        <form>
-            <label for="login">Логин:</label>
-            <input type="text" id="login" required>
-            <label for="password">Пароль:</label>
-            <input type="password" id="password" required>
-            <button type="button" onclick="window.location.href='search.html'">Войти</button>
+        <form action="login.php" method="POST">
+            <label for="Login">Логин:</label>
+            <input type="text" id="Login" name="Login" required><br>
+            <label for="Password">Пароль:</label>
+            <input type="password" id="Password" name="Password" required><br>
+            <input type="submit" value="Войти">
         </form>
         <a href="register.html">Зарегистрироваться</a>
     </div>
-</body>
-</html>
+	</body>

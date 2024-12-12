@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($conn->query($sql) === TRUE) {
             echo "<script> 
             alert('Регистрация прошла успешно!'); 
-				window.location.href = 'login.html';
+				window.location.href = 'index.html';
 			exit();			
           </script>";
         } else {
